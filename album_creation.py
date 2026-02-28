@@ -5,7 +5,7 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.table import WD_ROW_HEIGHT_RULE
 
 #設定
-IMAGE_FOLDER = "images"
+IMAGE_FOLDER = "processed_images"
 OUTPUT_FILE = "album.docx"
 
 ROWS = 3

@@ -2,8 +2,8 @@ import os
 from PIL import Image, ImageOps
 
 #設定
-INPUT_FOLDER = r"C:\Users\mentu\OneDrive\画像\アルバム用\アルバム写真"
-OUTPUT_FOLDER = r"C:\Users\mentu\OneDrive\画像\アルバム用\processed"
+INPUT_FOLDER = "images"
+OUTPUT_FOLDER = "processed_images"
 
 TARGET_RATIO = 3 / 4  # width / height（横:縦）
 OUTPUT_SIZE = (1500, 2000)  # 最終リサイズサイズ
