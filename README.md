@@ -9,6 +9,9 @@ Wordでアルバムを作る際、写真を１枚１枚手作業で並べるの�
 
 本ツールではその工程を自動化・効率化しています。
 
+また、基本的に3:4(横：縦)の画像によるアルバムを想定しているので、それ以外の画像比率の場合image_preprocess.pyの段階で、
+3:4(横：縦)に修正されます。
+
 ---
 
 ## 🎯背景・目的
@@ -39,8 +42,8 @@ Wordでアルバムを作る際、写真を１枚１枚手作業で並べるの�
 
 ## ✨主な機能
 
-1. 画像のリサイズ・回転
-2. Wordファイルに画像の貼り付け
+1. 画像のリサイズ・回転 : image_preprocess
+2. Wordファイルに画像の貼り付け : album_creation
 
 ---
 
@@ -49,9 +52,11 @@ Wordでアルバムを作る際、写真を１枚１枚手作業で並べるの�
 1. **リポジトリをクローン**
 
 ```bash
-git clone https://github.com/ae2418-ui/Album-Automation.git
-cd Album-Automation
+git clone https://github.com/ae2418-ui/album-automation.git
+cd album-automation
 ```
+
+---
 
 2. **必要なライブラリをインストール**
 
@@ -59,15 +64,40 @@ cd Album-Automation
 python -m pip install -r requirements.txt
 ```
 
-3. **スクリプトを実行**
+---
+
+3. **画像の準備**
+
+- imagesフォルダにアルバムに追加したい画像(jpg/png)を入れる。
+
+---
+
+4. **画像の整形**
+
+- image_preprocess.pyを実行することで、images内の全ての画像を3:4(横：縦)に整形できる。
+
+
+- 処理された画像は、processed_imagesファイルに格納される。
 
 ```bash
-python main.py
+python image_preprocess.py
 ```
 
-4. **出力結果の確認**
+---
 
-- スクリプト実行後、`output/` フォルダに Word ファイルが生成されることを確認します。
+5. **アルバム作成**
+
+- album_creation.pyを実行することで、album.docxというwordファイルが作成され、写真が配置される。
+
+```bash
+python album_creation.py
+```
+
+---
+
+6. **出力結果の確認**
+
+- スクリプト実行後、`output/` フォルダに Word ファイル(album.docx)が生成されることを確認します。
 - 生成された Word ファイルを開き、写真が正しく配置されているかチェックします。
 - 問題がある場合は、画像フォルダ内の写真の形式や名前を確認してください。
    
