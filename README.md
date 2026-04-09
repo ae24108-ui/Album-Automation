@@ -51,7 +51,7 @@ Wordでアルバムを作る際、写真を１枚１枚手作業で並べるの�
 1. **リポジトリをクローン**
 
 ```bash
-git clone https://github.com/ae2418-ui/album-automation.git
+git clone https://github.com/yasumoto-dev/album-automation.git
 cd album-automation
 ```
 
